@@ -19,7 +19,7 @@ public class ExamServiceImpl implements ExamServiceInterface {
 	public String addnewTask(Exam newTask) {
 		System.out.println("in add new book");
 		Exam task = examDao.save(newTask);
-		return "new book added"+task.getTaskId();
+		return "new task added"+task.getTaskId();
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class ExamServiceImpl implements ExamServiceInterface {
 			examDao.save(newtask);
 			
 		}
-		return "updated book succcessfully";
+		return "updated task succcessfully";
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class ExamServiceImpl implements ExamServiceInterface {
 		if(examDao.existsById(TaskId)) {
 			examDao.deleteById(TaskId);
 		}
-		return "deleted successfully";
+		return "task deleted successfully";
 	}
 	
 	
